@@ -1,0 +1,14 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.slide_tackle"
+  },
+  "supported_items": "#somethingsenchanting:slide_tackle_supported",
+  "primary_items": "#somethingsenchanting:slide_tackle_supported",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 20, "per_level_above_first": 10 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 4,
+  "slots": ["legs"],
+  "effects": {}
+}

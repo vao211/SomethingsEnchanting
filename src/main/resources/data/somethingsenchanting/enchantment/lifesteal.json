@@ -1,0 +1,35 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.lifesteal"
+  },
+  "supported_items": "#somethingsenchanting:lifesteal_supported",
+  "primary_items": "#somethingsenchanting:lifesteal_supported",
+  "weight": 2,
+  "max_level": 1,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 4,
+  "slots": [
+    "head"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+          "type": "somethingsenchanting:lifesteal",
+          "window_ticks": 40,
+          "cooldown_ticks": 60,
+          "heal_fraction": 0.30
+        }
+      }
+    ]
+  }
+}

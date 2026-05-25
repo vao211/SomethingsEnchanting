@@ -1,0 +1,27 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.echo_strike"
+  },
+  "supported_items": "#somethingsenchanting:echo_strike_supported",
+  "primary_items": "#somethingsenchanting:echo_strike_supported",
+  "weight": 3,
+  "max_level": 3,
+  "min_cost": { "base": 10, "per_level_above_first": 5 },
+  "max_cost": { "base": 60, "per_level_above_first": 10 },
+  "anvil_cost": 3,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "somethingsenchanting:echo_strike",
+          "delay_ticks": 20,
+          "cooldown_ticks": 20,
+          "damage_multiplier": 0.33
+        }
+      }
+    ]
+  }
+}

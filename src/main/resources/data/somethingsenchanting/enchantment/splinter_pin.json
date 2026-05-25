@@ -1,0 +1,14 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.splinter_pin"
+  },
+  "supported_items": "#somethingsenchanting:splinter_pin_supported",
+  "primary_items": "#somethingsenchanting:splinter_pin_supported",
+  "weight": 2,
+  "max_level": 2,
+  "min_cost": { "base": 20, "per_level_above_first": 10 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 6,
+  "slots": ["mainhand", "offhand"],
+  "effects": {}
+}

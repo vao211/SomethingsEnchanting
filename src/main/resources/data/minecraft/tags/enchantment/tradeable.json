@@ -1,0 +1,16 @@
+﻿{
+  "replace": false,
+  "values": [
+    "somethingsenchanting:lifesteal",
+    "somethingsenchanting:telepathic",
+    "somethingsenchanting:ensnare",
+    "somethingsenchanting:echo_strike",
+    "somethingsenchanting:double_jump",
+    "somethingsenchanting:berserker",
+    "somethingsenchanting:slide_tackle",
+    "somethingsenchanting:earth_shatter",
+    "somethingsenchanting:splinter_pin",
+    "somethingsenchanting:aegis_assault",
+    "somethingsenchanting:wake_rider"
+  ]
+}

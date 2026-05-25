@@ -1,0 +1,10 @@
+﻿{
+  "replace": false,
+  "values": [
+    "minecraft:trident",
+    { "id": "#simplyswords:spears", "required": false },
+    { "id": "#arsenal:tridents", "required": false },
+    { "id": "#rpg_series:weapon_type/spear", "required":  false},
+    { "id": "#soulsweapons:hammer", "required": false }
+  ]
+}

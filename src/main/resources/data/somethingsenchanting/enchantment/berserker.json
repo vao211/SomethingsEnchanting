@@ -1,0 +1,26 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.berserker"
+  },
+  "supported_items": "#somethingsenchanting:berserker_supported",
+  "primary_items": "#somethingsenchanting:berserker_supported",
+  "weight": 2,
+  "max_level": 1,
+  "min_cost": { "base": 25, "per_level_above_first": 0 },
+  "max_cost": { "base": 60, "per_level_above_first": 0 },
+  "anvil_cost": 5,
+  "slots": ["chest"],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "victim",
+        "affected": "victim",
+        "effect": {
+          "type": "somethingsenchanting:berserker",
+          "cooldown_ticks": 1200,
+          "health_threshold": 6.0
+        }
+      }
+    ]
+  }
+}

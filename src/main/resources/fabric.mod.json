@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "somethingsenchanting",
+  "version": "${version}",
+  "name": "SomethingsEnchanting",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/somethingsenchanting/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "vao211.somethingsenchanting.client.SomethingsenchantingDataGenerator"
+    ],
+    "client": [
+      "vao211.somethingsenchanting.client.SomethingsenchantingClient"
+    ],
+    "main": [
+      "vao211.somethingsenchanting.Somethingsenchanting"
+    ]
+  },
+  "mixins": [
+    "somethingsenchanting.mixins.json",
+    {
+      "config": "somethingsenchanting.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

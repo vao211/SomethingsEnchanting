@@ -1,0 +1,29 @@
+﻿{
+  "description": { "translate": "enchantment.somethingsenchanting.aegis_assault" },
+  "supported_items": "#somethingsenchanting:aegis_assault_supported",
+  "primary_items": "#somethingsenchanting:aegis_assault_supported",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 10, "per_level_above_first": 10 },
+  "max_cost": { "base": 60, "per_level_above_first": 15 },
+  "anvil_cost": 4,
+  "slots": ["mainhand", "offhand"],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:add",
+          "value": { "type": "minecraft:linear", "base": 3.0, "per_level_above_first": 3.0 }
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": { "type": "somethingsenchanting:aegis_assault" }
+      }
+    ]
+  }
+}

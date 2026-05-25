@@ -1,0 +1,14 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.wake_rider"
+  },
+  "supported_items": "#somethingsenchanting:wake_rider_supported",
+  "primary_items": "#somethingsenchanting:wake_rider_supported",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 15, "per_level_above_first": 10 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 4,
+  "slots": ["legs"],
+  "effects": {}
+}

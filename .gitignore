@@ -1,0 +1,56 @@
+﻿# Gradle & Fabric Loom
+.gradle/
+build/
+run/
+.looms-cache/
+remappedModVersions.txt
+!gradlew
+!gradlew.bat
+gradle/
+!gradle/wrapper/gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
+
+# Fabric & Minecraft runtime
+logs/
+crash-reports/
+world/
+usercache.json
+usernamecache.json
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Các file tạm / hệ thống
+*.log
+*.lock
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+*.key
+*.pem
+*.env
+secret.env

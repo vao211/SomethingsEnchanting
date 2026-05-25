@@ -1,0 +1,26 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.earth_shatter"
+  },
+  "supported_items": "#somethingsenchanting:earth_shatter_supported",
+  "primary_items": "#somethingsenchanting:earth_shatter_supported",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 10, "per_level_above_first": 10 },
+  "max_cost": { "base": 60, "per_level_above_first": 10 },
+  "anvil_cost": 3,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "somethingsenchanting:earth_shatter",
+          "cooldown_ticks": 60,
+          "fraction_per_level": 0.25
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+﻿{
+  "enchantment.somethingsenchanting.lifesteal": "Hút Máu",
+  "enchantment.somethingsenchanting.lifesteal.desc": "Hồi lượng máu tương đương 30% sát thương vũ khí của bạn mỗi khi đánh trúng địch. Kích hoạt liên tục trong 1.5 giây, sau đó cần 3 giây để hồi chiêu.",
+
+  "enchantment.somethingsenchanting.ensnare": "Trói Chân",
+  "enchantment.somethingsenchanting.ensnare.desc": "Cố định mục tiêu trong 2 giây khi bị ném trúng bởi đinh ba hoặc vũ khí ném",
+
+  "enchantment.somethingsenchanting.telepathic": "Tâm Linh",
+  "enchantment.somethingsenchanting.telepathic.desc": "Vật phẩm rơi ra từ khối vuông sẽ được chuyển thẳng vào túi đồ của bạn.",
+
+  "enchantment.somethingsenchanting.echo_strike": "Dư Ảnh",
+  "enchantment.somethingsenchanting.echo_strike.desc": "Tạo ra một vết chém vô hình bồi thêm sát thương lên kẻ địch 1 giây sau khi đòn đánh trúng đích. Thời gian hồi: 1 giây.",
+
+  "enchantment.somethingsenchanting.double_jump": "Nhảy Kép",
+  "enchantment.somethingsenchanting.double_jump.desc": "Cho phép bạn đạp không khí để nhảy thêm một lần nữa khi đang ở trên không.",
+
+  "enchantment.somethingsenchanting.berserker": "Huyết Giáp",
+  "enchantment.somethingsenchanting.berserker.desc": "Khi lượng máu giảm xuống dưới 3 tim do chịu sát thương, giáp sẽ phát nổ hất văng kẻ địch, ban cho bạn Sức Mạnh II và Kháng Cự III trong 5 giây. Đổi lại, áo giáp sẽ bị trừ đi 1/3 độ bền hiện tại. Thời gian hồi chiêu: 60 giây.",
+
+  "enchantment.somethingsenchanting.slide_tackle": "Trượt Chém",
+  "enchantment.somethingsenchanting.slide_tackle.desc": "Khi đang chạy nước rút, bấm Ngồi để lướt một quãng dài về phía trước. Kẻ địch bị tông trúng sẽ nhận 4 sát thương (tăng theo cấp), bị hất tung lên cao và dính Chậm Chạp III trong 2 giây. Hồi chiêu: 3 giây.",
+
+  "enchantment.somethingsenchanting.splinter_pin": "Ghim Tán Xạ",
+  "enchantment.somethingsenchanting.splinter_pin.desc": "Mũi tên bắn trúng sẽ găm vào kẻ địch. Khi kẻ địch bị tiêu diệt, toàn bộ mũi tên đang ghim sẽ nảy bắn ra xung quanh, gây sát thương và giữ nguyên hiệu ứng độc dược. Các mũi tên nảy ra chỉ gây hiệu ứng 1 lần duy nhất.",
+
+  "enchantment.somethingsenchanting.earth_shatter": "Địa Chấn",
+  "enchantment.somethingsenchanting.earth_shatter.desc": "Khi nhảy lên tấn công (Đòn chí mạng), vũ khí đập mạnh xuống đất tạo ra sóng xung kích trong bán kính 2 block. Kẻ địch xung quanh nhận 25% sát thương gốc mỗi cấp, bị hất văng và chịu hiệu ứng Chậm Chạp V trong 2 giây. Hồi chiêu: 5 giây.",
+
+  "enchantment.somethingsenchanting.aegis_assault": "Xung Phong Lũy Thép",
+  "enchantment.somethingsenchanting.aegis_assault.desc": "Cầm khiên ở tay chính để đập văng kẻ địch, biến chúng thành đạn sống tông vào đồng bọn gây 3 sát thương (tăng theo cấp). Khi đang giơ khiên đỡ đòn, bấm Ngồi (Shift) để lướt càn quét về phía trước, hất tung kẻ địch lên trời và gây sát thương lớn.",
+
+  "enchantment.somethingsenchanting.wake_rider": "Cưỡi Sóng",
+  "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền của bạn mỗi cấp."
+}

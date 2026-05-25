@@ -1,0 +1,12 @@
+﻿{
+  "replace": false,
+  "values": [
+    "minecraft:mace",
+    "#minecraft:axes",
+    {"id": "#arsenal:big_weapons", "required" : false},
+    { "id": "#simplyswords:heavy_weapons", "required": false },
+    { "id": "#soulsweapons:heavy_weapons", "required": false },
+    { "id": "#rpg_series:weapon_type/mace", "required": false },
+    { "id": "#rpg_series:weapon_type/hammer", "required": false }
+  ]
+}
