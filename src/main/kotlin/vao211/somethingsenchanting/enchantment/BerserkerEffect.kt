@@ -13,9 +13,8 @@ import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.server.world.ServerWorld
-import net.minecraft.sound.SoundCategory
-import net.minecraft.sound.SoundEvents
 import net.minecraft.util.math.Vec3d
+import net.minecraft.text.Text
 import java.util.WeakHashMap
 
 object BerserkerManager {
@@ -68,7 +67,7 @@ data class BerserkerEffect(val cooldownTicks: Int, val healthThreshold: Float) :
 
         target.addStatusEffect(StatusEffectInstance(StatusEffects.STRENGTH, 100, 2))
         target.addStatusEffect(StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2))
-        target.sendMessage(net.minecraft.text.Text.literal("Berserkinggggggg"), true)
+        target.sendMessage(Text.literal("Berserkinggggggg"), true)
     }
 
     override fun getCodec(): MapCodec<out EnchantmentEntityEffect> {

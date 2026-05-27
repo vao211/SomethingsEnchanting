@@ -73,7 +73,7 @@ object SlideTackleManager {
                         if (entity is LivingEntity && !slideState.hitEntities.contains(entity.uuid)) {
                             slideState.hitEntities.add(entity.uuid)
 
-                            val damageAmount = 4.0f + (slideState.level * 2);
+                            val damageAmount = 4.0f + (slideState.level * 2)
                             val damageSource = world.damageSources.playerAttack(player)
                             entity.damage(damageSource, damageAmount)
                             entity.addVelocity(0.0, 1.0, 0.0)

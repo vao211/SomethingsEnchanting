@@ -16,6 +16,7 @@ import net.minecraft.sound.SoundEvents
 import net.minecraft.text.Text
 import java.util.UUID
 import java.util.WeakHashMap
+import net.minecraft.entity.decoration.DisplayEntity.BillboardMode
 
 data class TimedArrow(val stack: ItemStack, val expireTime: Long)
 data class StuckData(val arrows: MutableList<TimedArrow>, var indicator: TextDisplayEntity? = null)
@@ -53,7 +54,7 @@ object SplinterPinManager {
         if (data.indicator == null || data.indicator!!.isRemoved || !data.indicator!!.isAlive) {
             val display = TextDisplayEntity(EntityType.TEXT_DISPLAY, world)
             display.text = text
-            display.setBillboardMode(net.minecraft.entity.decoration.DisplayEntity.BillboardMode.CENTER)
+            display.billboardMode =BillboardMode.CENTER
             display.setPosition(victim.x, victim.y + victim.height + 0.5, victim.z)
             display.addCommandTag(INDICATOR_TAG)
 

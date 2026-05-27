@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.Vec3d
 import java.util.UUID
 import java.util.WeakHashMap
+import net.minecraft.entity.player.PlayerEntity
 
 data class DashState(var ticksLeft: Int, val level: Int, val hitEntities: MutableSet<UUID> = mutableSetOf())
 
@@ -49,7 +50,7 @@ object AegisAssaultManager {
                                 player.addVelocity(dashVec.x, 0.2, dashVec.z)
                                 player.velocityModified = true
 
-                                world.playSound(null as net.minecraft.entity.player.PlayerEntity?, player.x, player.y, player.z, SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 0.5f)
+                                world.playSound(null as PlayerEntity?, player.x, player.y, player.z, SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 0.5f)
                             }
                         }
                     }
@@ -76,7 +77,7 @@ object AegisAssaultManager {
                             entity.addVelocity(push.x, 0.7, push.z)
                             entity.velocityModified = true
 
-                            world.playSound(null as net.minecraft.entity.player.PlayerEntity?, entity.x, entity.y, entity.z, SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.PLAYERS, 1.0f, 0.8f)
+                            world.playSound(null as PlayerEntity?, entity.x, entity.y, entity.z, SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.PLAYERS, 1.0f, 0.8f)
                         }
                     }
                     if (dashState.ticksLeft <= 0) DASHING_PLAYERS.remove(player)
@@ -111,7 +112,7 @@ object AegisAssaultManager {
                         projectile.velocityModified = true
                         hitSomeone = true
 
-                        world.playSound(null as net.minecraft.entity.player.PlayerEntity?, victim.x, victim.y, victim.z, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, SoundCategory.PLAYERS, 0.8f, 1.2f)
+                        world.playSound(null as PlayerEntity?, victim.x, victim.y, victim.z, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, SoundCategory.PLAYERS, 0.8f, 1.2f)
                         break
                     }
                 }
