@@ -6,9 +6,6 @@ run/
 remappedModVersions.txt
 !gradlew
 !gradlew.bat
-gradle/
-!gradle/wrapper/gradle-wrapper.properties
-!gradle/wrapper/gradle-wrapper.jar
 
 # Fabric & Minecraft runtime
 logs/
