@@ -29,7 +29,8 @@
   "enchantment.somethingsenchanting.aegis_assault.desc": "Bash enemies with your shield to send them flying into others as living projectiles, dealing 3 damage per level. While blocking, press Sneak to perform a devastating forward charge, knocking enemies airborne and dealing heavy damage.",
 
   "enchantment.somethingsenchanting.wake_rider": "Wake Rider",
-  "enchantment.somethingsenchanting.wake_rider.desc": "Increases the speed of any boat you drive by ~20% per level."
+  "enchantment.somethingsenchanting.wake_rider.desc": "Increases the speed of any boat you drive by ~20% per level.",
 
-
+  "enchantment.somethingsenchanting.triple_dig": "Triple Dig",
+  "enchantment.somethingsenchanting.triple_dig.desc": "Mines a 3x3 area of blocks. Sneak to mine a single block."
 }

@@ -30,5 +30,8 @@
   "enchantment.somethingsenchanting.aegis_assault.desc": "Cầm khiên ở tay chính để đập văng kẻ địch, biến chúng thành đạn sống tông vào đồng bọn gây 3 sát thương (tăng theo cấp). Khi đang giơ khiên đỡ đòn, bấm Ngồi (Shift) để lướt càn quét về phía trước, hất tung kẻ địch lên trời và gây sát thương lớn.",
 
   "enchantment.somethingsenchanting.wake_rider": "Cưỡi Sóng",
-  "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền của bạn mỗi cấp."
+  "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền của bạn mỗi cấp.",
+
+  "enchantment.somethingsenchanting.triple_dig": "Đào Nhân ba",
+  "enchantment.somethingsenchanting.triple_dig.desc": "Mở rộng tầm phá hủy khối lên 3x3. Nhấn Shift để đào từng khối như bình thường."
 }

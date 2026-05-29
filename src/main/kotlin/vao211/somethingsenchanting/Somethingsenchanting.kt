@@ -14,6 +14,7 @@ import vao211.somethingsenchanting.enchantment.EnsnareEffect
 import vao211.somethingsenchanting.enchantment.LifestealEffect
 import vao211.somethingsenchanting.enchantment.SlideTackleManager
 import vao211.somethingsenchanting.enchantment.SplinterPinManager
+import vao211.somethingsenchanting.enchantment.TripleDigManager
 
 class Somethingsenchanting : ModInitializer {
 
@@ -22,7 +23,7 @@ class Somethingsenchanting : ModInitializer {
         SlideTackleManager.init()
         SplinterPinManager.init()
         AegisAssaultManager.init()
-
+        TripleDigManager.init()
 
         Registry.register(
             Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE,
