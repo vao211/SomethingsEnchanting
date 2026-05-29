@@ -6,7 +6,8 @@
   "mixins": [
     "BlockMixin",
     "ProjectileMixin",
-    "BoatEntityMixin"
+    "BoatEntityMixin",
+    "compat.JustHammersTelepathicMixin"
   ],
   "injectors": {
     "defaultRequire": 1
