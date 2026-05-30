@@ -51,13 +51,12 @@ public abstract class JustHammersTelepathicMixin {
                 }
             }
 
-            if (hasTelepathic) {
+            if (hasTelepathic && !player.getCommandTags().contains("SomethingsAddons_PickupLocked")) {
                 for (ItemStack drop : drops) {
                     if (!player.getInventory().insertStack(drop)) {
                         player.dropItem(drop, false);
                     }
                 }
-
                 return Collections.emptyList();
             }
         }
