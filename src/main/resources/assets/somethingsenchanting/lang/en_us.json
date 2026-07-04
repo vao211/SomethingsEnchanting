@@ -1,6 +1,7 @@
 ﻿{
   "enchantment.somethingsenchanting.lifesteal": "Lifesteal",
-  "enchantment.somethingsenchanting.lifesteal.desc": "Heals health equal to 30% of your weapon's damage on hit. Active for 1.5s followed by a 3s cooldown.",
+  "enchantment.somethingsenchanting.lifesteal.desc": "Heals base on your weapon's damage ang attack speed, 3s cooldowns after 3(+1/lv) heal time",
+
   "enchantment.somethingsenchanting.ensnare": "Ensnare",
   "enchantment.somethingsenchanting.ensnare.desc": "Immobilizes targets for 2 seconds when hit by Trident or Thrown Weapon.",
 

@@ -11,25 +11,12 @@
     "per_level_above_first": 0
   },
   "max_cost": {
-    "base": 60,
+    "base": 30,
     "per_level_above_first": 0
   },
   "anvil_cost": 4,
   "slots": [
     "head"
   ],
-  "effects": {
-    "minecraft:post_attack": [
-      {
-        "enchanted": "attacker",
-        "affected": "attacker",
-        "effect": {
-          "type": "somethingsenchanting:lifesteal",
-          "window_ticks": 40,
-          "cooldown_ticks": 60,
-          "heal_fraction": 0.30
-        }
-      }
-    ]
-  }
+  "effects": {}
 }

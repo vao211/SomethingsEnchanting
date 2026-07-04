@@ -1,6 +1,6 @@
 ﻿{
   "enchantment.somethingsenchanting.lifesteal": "Hút Máu",
-  "enchantment.somethingsenchanting.lifesteal.desc": "Hồi lượng máu tương đương 30% sát thương vũ khí của bạn mỗi khi đánh trúng địch. Kích hoạt liên tục trong 1.5 giây, sau đó cần 3 giây để hồi chiêu.",
+  "enchantment.somethingsenchanting.lifesteal.desc": "Hồi lượng máu dựa trên sát thương và tốc đánh, hồi chiêu 3 giây sau khi hút máu 3(+1/lv) lần",
 
   "enchantment.somethingsenchanting.ensnare": "Trói Chân",
   "enchantment.somethingsenchanting.ensnare.desc": "Cố định mục tiêu trong 2 giây khi bị ném trúng bởi đinh ba hoặc vũ khí ném",
@@ -30,7 +30,7 @@
   "enchantment.somethingsenchanting.aegis_assault.desc": "Cầm khiên ở tay chính để đập văng kẻ địch, biến chúng thành đạn sống tông vào đồng bọn gây 3 sát thương (tăng theo cấp). Khi đang giơ khiên đỡ đòn, bấm Ngồi (Shift) để lướt càn quét về phía trước, hất tung kẻ địch lên trời và gây sát thương lớn.",
 
   "enchantment.somethingsenchanting.wake_rider": "Cưỡi Sóng",
-  "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền của bạn mỗi cấp.",
+  "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền mỗi cấp.",
 
   "enchantment.somethingsenchanting.triple_dig": "Đào Nhân ba",
   "enchantment.somethingsenchanting.triple_dig.desc": "Mở rộng tầm phá hủy khối lên 3x3. Nhấn Shift để đào từng khối như bình thường."
