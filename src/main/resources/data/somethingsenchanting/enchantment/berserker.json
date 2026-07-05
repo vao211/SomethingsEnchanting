@@ -17,7 +17,7 @@
         "affected": "victim",
         "effect": {
           "type": "somethingsenchanting:berserker",
-          "cooldown_ticks": 1200,
+          "cooldown_ticks": 600,
           "health_threshold": 6.0
         }
       }

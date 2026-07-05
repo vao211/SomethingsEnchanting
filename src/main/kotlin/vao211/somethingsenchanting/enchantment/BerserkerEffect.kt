@@ -78,7 +78,7 @@ data class BerserkerEffect(val cooldownTicks: Int, val healthThreshold: Float) :
 
         target.addStatusEffect(StatusEffectInstance(StatusEffects.STRENGTH, 100, 2))
         target.addStatusEffect(StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2))
-        target.addStatusEffect(StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1))
+        target.addStatusEffect(StatusEffectInstance(StatusEffects.ABSORPTION, 100, 2))
 
         target.sendMessage(Text.literal("§c§lBerserkinggggggg!"), true)
     }
