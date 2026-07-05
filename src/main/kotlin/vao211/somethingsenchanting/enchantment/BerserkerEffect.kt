@@ -34,23 +34,34 @@ data class BerserkerEffect(val cooldownTicks: Int, val healthThreshold: Float) :
 
     override fun apply(world: ServerWorld, level: Int, context: EnchantmentEffectContext, target: Entity, pos: Vec3d) {
         if (target !is ServerPlayerEntity) return
+
         if (target.health > healthThreshold) return
 
         val currentTime = world.time
         val lastTrigger = BerserkerManager.COOLDOWNS.getOrDefault(target, 0L)
+
         if (currentTime - lastTrigger < cooldownTicks) return
+
+        val stack = context.stack
+        var damageToTake = 0
+
+        if (stack.isDamageable) {
+            val maxDurability = stack.maxDamage
+            val currentDurability = maxDurability - stack.damage
+
+            val tenPercent = (maxDurability * 0.1f).toInt()
+
+            if (currentDurability <= tenPercent) {
+                return
+            }
+            damageToTake = tenPercent
+        }
 
         BerserkerManager.COOLDOWNS[target] = currentTime
 
-        val stack = context.stack
-        if (stack.isDamageable) {
-            val currentDurability = stack.maxDamage - stack.damage
-            val damageToTake = currentDurability / 5
-
-            if (damageToTake > 0) {
-                stack.damage(damageToTake, world, target) { brokenItem ->
-                    target.sendEquipmentBreakStatus(brokenItem, EquipmentSlot.CHEST)
-                }
+        if (stack.isDamageable && damageToTake > 0) {
+            stack.damage(damageToTake, world, target) { brokenItem ->
+                target.sendEquipmentBreakStatus(brokenItem, EquipmentSlot.CHEST)
             }
         }
 
@@ -67,7 +78,9 @@ data class BerserkerEffect(val cooldownTicks: Int, val healthThreshold: Float) :
 
         target.addStatusEffect(StatusEffectInstance(StatusEffects.STRENGTH, 100, 2))
         target.addStatusEffect(StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2))
-        target.sendMessage(Text.literal("Berserkinggggggg"), true)
+        target.addStatusEffect(StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1))
+
+        target.sendMessage(Text.literal("§c§lBerserkinggggggg!"), true)
     }
 
     override fun getCodec(): MapCodec<out EnchantmentEntityEffect> {

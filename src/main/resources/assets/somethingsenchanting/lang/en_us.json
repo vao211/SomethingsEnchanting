@@ -15,7 +15,7 @@
   "enchantment.somethingsenchanting.double_jump.desc": "Allows you to perform a second jump while mid-air.",
 
   "enchantment.somethingsenchanting.berserker": "Berserker's Resolve",
-  "enchantment.somethingsenchanting.berserker.desc": "When taking damage drops your health below 3 hearts, your armor erupts, knocking enemies back and granting Strength II and Resistance III for 5 seconds. This immense power consumes 1/3 of the armor's current durability. Cooldown: 60 seconds.",
+  "enchantment.somethingsenchanting.berserker.desc": "When taking damage drops your health below 3 hearts, your armor erupts, knocking enemies back and granting Absorption, Strength II and Resistance III for 5 seconds. This immense power consumes 10% of the armor's current durability. Cooldown: 60 seconds.",
 
   "enchantment.somethingsenchanting.slide_tackle": "Slide Tackle",
   "enchantment.somethingsenchanting.slide_tackle.desc": "While sprinting, press Sneak to slide rapidly forward. Enemies hit by the slide take 4 damage (+1 per level), are knocked airborne, and suffer Slowness III for 2 seconds. Cooldown: 3 seconds.",
