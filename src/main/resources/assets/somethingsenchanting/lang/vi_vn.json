@@ -33,5 +33,8 @@
   "enchantment.somethingsenchanting.wake_rider.desc": "Tăng khoảng 20% tốc độ thuyền mỗi cấp.",
 
   "enchantment.somethingsenchanting.triple_dig": "Đào Nhân ba",
-  "enchantment.somethingsenchanting.triple_dig.desc": "Mở rộng tầm phá hủy khối lên 3x3. Nhấn Shift để đào từng khối như bình thường."
+  "enchantment.somethingsenchanting.triple_dig.desc": "Mở rộng tầm phá hủy khối lên 3x3. Nhấn Shift để đào từng khối như bình thường.",
+
+  "enchantment.somethingsenchanting.wind_dash": "Đạp Gió",
+  "enchantment.somethingsenchanting.wind_dash.desc": "Lướt mạnh tới phía trước khi ấn Ngồi lúc đang bay. Tiêu hao độ bền."
 }

@@ -7,8 +7,9 @@
     "BlockMixin",
     "BoatEntityMixin",
     "LivingEntityLifestealMixin",
+    "PlayerEntityWindDashMixin",
     "ProjectileMixin",
-    "compat.JustHammersTelepathicMixin"
+    "compat.JustHammersTelepathicMixin",
   ],
   "injectors": {
     "defaultRequire": 1

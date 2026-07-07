@@ -33,5 +33,8 @@
   "enchantment.somethingsenchanting.wake_rider.desc": "Increases the speed of any boat you drive by ~20% per level.",
 
   "enchantment.somethingsenchanting.triple_dig": "Triple Dig",
-  "enchantment.somethingsenchanting.triple_dig.desc": "Mines a 3x3 area of blocks. Sneak to mine a single block."
+  "enchantment.somethingsenchanting.triple_dig.desc": "Mines a 3x3 area of blocks. Sneak to mine a single block.",
+
+  "enchantment.somethingsenchanting.wind_dash": "Wind Dash",
+  "enchantment.somethingsenchanting.wind_dash.desc": "Dash forward in the air by sneaking while gliding. Consumes durability."
 }
