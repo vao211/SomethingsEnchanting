@@ -17,6 +17,8 @@ import net.minecraft.text.Text
 import java.util.UUID
 import java.util.WeakHashMap
 import net.minecraft.entity.decoration.DisplayEntity.BillboardMode
+import kotlin.math.cos
+import kotlin.math.sin
 
 data class TimedArrow(val stack: ItemStack, val expireTime: Long)
 data class StuckData(val arrows: MutableList<TimedArrow>, var indicator: TextDisplayEntity? = null)
@@ -122,8 +124,8 @@ object SplinterPinManager {
                                 val projectile = item.createArrow(world, timedArrow.stack, victim, dummyBow)
 
                                 val rad = Math.toRadians(currentAngle)
-                                projectile.setPosition(victim.x, victim.y + victim.height / 2.0, victim.z)
-                                projectile.setVelocity(Math.cos(rad), 0.3, Math.sin(rad), 1.6f, 1.0f)
+                                projectile.setPosition(victim.x, victim.y + (victim.height * 0.4), victim.z)
+                                projectile.setVelocity(cos(rad), 0.2, sin(rad), 1.6f, 1.0f)
 
                                 if (projectile is PersistentProjectileEntity) {
                                     projectile.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY
