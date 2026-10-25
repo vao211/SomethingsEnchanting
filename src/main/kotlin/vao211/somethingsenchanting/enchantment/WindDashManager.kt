@@ -4,8 +4,6 @@ import net.minecraft.entity.EquipmentSlot
 import net.minecraft.item.ItemStack
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.server.network.ServerPlayerEntity
-import net.minecraft.sound.SoundCategory
-import net.minecraft.sound.SoundEvents
 import net.minecraft.util.math.Vec3d
 import java.util.WeakHashMap
 
@@ -44,8 +42,6 @@ object WindDashManager {
 //      player.addVelocity(lookVec.x * force, lookVec.y * force, lookVec.z * force)
         player.velocity = Vec3d(lookVec.x * force, lookVec.y * force, lookVec.z * force)
         player.velocityModified = true
-
-        world.playSound(null, player.x, player.y, player.z, SoundEvents.ITEM_TRIDENT_RIPTIDE_1, SoundCategory.PLAYERS, 1.0f, 1.5f)
         world.spawnParticles(ParticleTypes.CLOUD, player.x, player.y, player.z, 15, 0.2, 0.2, 0.2, 0.1)
     }
 }
