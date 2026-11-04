@@ -36,5 +36,9 @@
   "enchantment.somethingsenchanting.triple_dig.desc": "Mines a 3x3 area of blocks. Sneak to mine a single block.",
 
   "enchantment.somethingsenchanting.wind_dash": "Wind Dash",
-  "enchantment.somethingsenchanting.wind_dash.desc": "Dash forward in the air by sneaking while gliding. Consumes durability."
+  "enchantment.somethingsenchanting.wind_dash.desc": "Dash forward in the air by sneaking while gliding. Consumes durability.",
+
+  "item.somethingsenchanting.medium_exp_bottle": "Medium Experience Bottle",
+  "item.somethingsenchanting.big_exp_bottle": "Big Experience Bottle",
+  "item.somethingsenchanting.huge_exp_bottle": "Huge Experience Bottle"
 }

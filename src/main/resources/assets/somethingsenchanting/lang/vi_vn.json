@@ -36,5 +36,9 @@
   "enchantment.somethingsenchanting.triple_dig.desc": "Mở rộng tầm phá hủy khối lên 3x3. Nhấn Shift để đào từng khối như bình thường.",
 
   "enchantment.somethingsenchanting.wind_dash": "Đạp Gió",
-  "enchantment.somethingsenchanting.wind_dash.desc": "Lướt mạnh tới phía trước khi ấn Ngồi lúc đang bay. Tiêu hao độ bền."
+  "enchantment.somethingsenchanting.wind_dash.desc": "Lướt mạnh tới phía trước khi ấn Ngồi lúc đang bay. Tiêu hao độ bền.",
+
+  "item.somethingsenchanting.medium_exp_bottle": "Chai kinh nghiệm cỡ vừa",
+  "item.somethingsenchanting.big_exp_bottle": "Chai kinh nghiệm cỡ lớn",
+  "item.somethingsenchanting.huge_exp_bottle": "Chai kinh nghiệm khổng lồ"
 }

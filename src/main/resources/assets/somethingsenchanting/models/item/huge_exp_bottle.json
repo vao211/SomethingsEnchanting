@@ -1,0 +1,6 @@
+﻿{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "somethingsenchanting:item/huge_exp_bottle"
+  }
+}
