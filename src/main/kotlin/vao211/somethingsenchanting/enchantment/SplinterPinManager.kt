@@ -29,6 +29,7 @@ object SplinterPinManager {
     private val PENDING_REMOVALS = mutableSetOf<Entity>()
     private const val INDICATOR_TAG = "splinter_pin_indicator"
     private const val TIMEOUT_TICKS = 3600L
+    private const val HEIGHT_OFFSET = 0.65
 
     fun addStuckArrow(victim: LivingEntity, arrow: ItemStack, level: Int) {
         if (victim.isRemoved) return
@@ -52,24 +53,23 @@ object SplinterPinManager {
         if (count <= 0) return
 
         val text = Text.literal("§6[§f$count§6]").append(Text.literal(" ➹").withColor(0xFF5555))
+        val targetY = victim.y + victim.height + HEIGHT_OFFSET
 
         if (data.indicator == null || data.indicator!!.isRemoved || !data.indicator!!.isAlive) {
             val display = TextDisplayEntity(EntityType.TEXT_DISPLAY, world)
             display.text = text
-            display.billboardMode =BillboardMode.CENTER
-            display.setPosition(victim.x, victim.y + victim.height + 0.5, victim.z)
+            display.billboardMode = BillboardMode.CENTER
+
+            display.setPosition(victim.x, targetY, victim.z)
             display.addCommandTag(INDICATOR_TAG)
 
             ACTIVE_INDICATORS.add(display.uuid)
 
-            display.startRiding(victim, true)
             world.spawnEntity(display)
             data.indicator = display
         } else {
             data.indicator?.text = text
-            if (data.indicator!!.vehicle != victim) {
-                data.indicator!!.startRiding(victim, true)
-            }
+            data.indicator?.setPosition(victim.x, targetY, victim.z)
         }
     }
 
@@ -87,7 +87,6 @@ object SplinterPinManager {
                 val data = STUCK_DATA.remove(entity)
                 data?.indicator?.let {
                     ACTIVE_INDICATORS.remove(it.uuid)
-                    it.stopRiding()
                     PENDING_REMOVALS.add(it)
                 }
             }
@@ -107,7 +106,6 @@ object SplinterPinManager {
                     STUCK_DATA.remove(victim)
                     data.indicator?.let { indicator ->
                         ACTIVE_INDICATORS.remove(indicator.uuid)
-                        indicator.stopRiding()
                         indicator.discard()
                     }
 
@@ -141,13 +139,24 @@ object SplinterPinManager {
                 }
                 else {
                     val currentTime = world.time
+
+                    data.indicator?.let { indicator ->
+                        if (!indicator.isRemoved) {
+                            if (world.time % 2L == 0L) {
+                                val targetY = victim.y + victim.height + HEIGHT_OFFSET
+                                if (indicator.x != victim.x || indicator.y != targetY || indicator.z != victim.z) {
+                                    indicator.setPosition(victim.x, targetY, victim.z)
+                                }
+                            }
+                        }
+                    }
+
                     val originalSize = data.arrows.size
                     data.arrows.removeAll { currentTime >= it.expireTime }
                     if (data.arrows.isEmpty()) {
                         STUCK_DATA.remove(victim)
                         data.indicator?.let { indicator ->
                             ACTIVE_INDICATORS.remove(indicator.uuid)
-                            indicator.stopRiding()
                             indicator.discard()
                         }
                     }
