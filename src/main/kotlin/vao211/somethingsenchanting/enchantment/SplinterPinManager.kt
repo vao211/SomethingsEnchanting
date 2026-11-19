@@ -108,8 +108,8 @@ object SplinterPinManager {
             val projectile = arrowItem.createArrow(world, arrowStack, victim, dummyBow)
             projectile.setPosition(spawnX, spawnY, spawnZ)
 
-            if (nearbyTargets.isNotEmpty()) {
-                val target = nearbyTargets[index % nearbyTargets.size]
+            if (index < nearbyTargets.size) {
+                val target = nearbyTargets[index]
                 val targetX = target.x
                 val targetY = target.y + (target.height * 0.55)
                 val targetZ = target.z
@@ -122,7 +122,8 @@ object SplinterPinManager {
 
                 projectile.setVelocity(dx, compensatedDy, dz, 1.8f, 0.25f)
             } else {
-                val baseAngle = (360.0 / totalArrows.coerceAtLeast(1)) * index + (world.random.nextDouble() * 30.0 - 15.0)
+                val randomIndex = index - nearbyTargets.size
+                val baseAngle = (360.0 / totalArrows.coerceAtLeast(1)) * randomIndex + (world.random.nextDouble() * 45.0 - 22.5)
                 val rad = Math.toRadians(baseAngle)
                 val vy = 0.15 + world.random.nextDouble() * 0.25
                 projectile.setVelocity(cos(rad), vy, sin(rad), 1.8f, 2.5f)
