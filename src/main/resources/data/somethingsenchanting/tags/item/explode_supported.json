@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "#minecraft:enchantable/bow",
-    "#minecraft:enchantable/crossbow",
-    "#c:enchantable/bow",
-    "#c:enchantable/crossbow"
+    "#minecraft:enchantable/crossbow"
   ]
 }
