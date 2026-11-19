@@ -14,6 +14,7 @@ import vao211.somethingsenchanting.enchantment.EarthshatterEffect
 import vao211.somethingsenchanting.enchantment.EchoStrikeEffect
 import vao211.somethingsenchanting.enchantment.EchoStrikeManager
 import vao211.somethingsenchanting.enchantment.EnsnareEffect
+import vao211.somethingsenchanting.enchantment.ExplodeManager
 import vao211.somethingsenchanting.enchantment.SlideTackleManager
 import vao211.somethingsenchanting.enchantment.SplinterPinManager
 import vao211.somethingsenchanting.enchantment.TripleDigManager
@@ -27,6 +28,7 @@ class Somethingsenchanting : ModInitializer {
         SplinterPinManager.init()
         AegisAssaultManager.init()
         TripleDigManager.init()
+        ExplodeManager.init()
 
         Registry.register(
             Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE,

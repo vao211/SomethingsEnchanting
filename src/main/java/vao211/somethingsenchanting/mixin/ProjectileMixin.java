@@ -13,12 +13,18 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import vao211.somethingsenchanting.enchantment.ExplodeManager;
 import vao211.somethingsenchanting.enchantment.SplinterPinManager;
 
 @Mixin(PersistentProjectileEntity.class)
 public abstract class ProjectileMixin {
     @Shadow public abstract ItemStack getWeaponStack();
-    @Shadow protected abstract ItemStack getItemStack();
+    @Shadow
+    public abstract ItemStack getItemStack();
+
+    @Shadow
+    public PersistentProjectileEntity.PickupPermission pickupType;
+
     @Inject(method = "onEntityHit", at = @At("RETURN"))
     private void onHitTarget(EntityHitResult entityHitResult, CallbackInfo ci) {
         Entity target = entityHitResult.getEntity();
@@ -26,13 +32,20 @@ public abstract class ProjectileMixin {
             ItemStack weapon = this.getWeaponStack();
             if (weapon != null && !weapon.isEmpty()) {
                 var registry = victim.getWorld().getRegistryManager().get(RegistryKeys.ENCHANTMENT);
-                var enchant = registry.get(Identifier.of("somethingsenchanting", "splinter_pin"));
-
-                if (enchant != null) {
-                    int level = EnchantmentHelper.getLevel(registry.getEntry(enchant), weapon);
+                var splinter_pin_enchant = registry.get(Identifier.of("somethingsenchanting", "splinter_pin"));
+                var explode_enchant = registry.get(Identifier.of("somethingsenchanting","explode"));
+                if (splinter_pin_enchant != null) {
+                    int level = EnchantmentHelper.getLevel(registry.getEntry(splinter_pin_enchant), weapon);
                     if (level > 0) {
                         ItemStack arrow = this.getItemStack();
                         SplinterPinManager.INSTANCE.addStuckArrow(victim, arrow.copy(), level);
+                    }
+                }
+                if(explode_enchant != null){
+                    int level = EnchantmentHelper.getLevel(registry.getEntry(explode_enchant), weapon);
+                    if(level > 0){
+                        ItemStack arrow = this.getItemStack();
+                        ExplodeManager.INSTANCE.addStuckArrow(victim, arrow.copy(), 1);
                     }
                 }
             }

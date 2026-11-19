@@ -36,7 +36,9 @@ object SplinterPinManager {
 
         val world = victim.world as? ServerWorld ?: return
         val currentTime = world.time
-        val data = STUCK_DATA.getOrPut(victim) { StuckData(mutableListOf()) }
+        val data = STUCK_DATA.getOrPut(victim) {
+            StuckData(mutableListOf())
+        }
 
         for (i in 1..level) {
             data.arrows.add(TimedArrow(arrow.copy(), currentTime + TIMEOUT_TICKS))

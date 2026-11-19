@@ -1,0 +1,15 @@
+﻿{
+  "description": {
+    "translate": "enchantment.somethingsenchanting.explode"
+  },
+  "supported_items": "#somethingsenchanting:explode_supported",
+  "primary_items": "#somethingsenchanting:explode_supported",
+  "weight": 2,
+  "max_level": 2,
+  "min_cost": { "base": 20, "per_level_above_first": 10 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 5,
+  "slots": ["mainhand", "offhand"],
+  "effects": {},
+  "exclusive_set": "somethingsenchanting:splinter_pin"
+}
