@@ -1,5 +1,6 @@
 ﻿package vao211.somethingsenchanting.enchantment
 
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents
 import net.minecraft.entity.Entity
@@ -34,6 +35,19 @@ object SplinterPinManager {
     private const val HEIGHT_OFFSET = 0.55
     private const val MAX_ARROWS = 20
     private const val SEARCH_RADIUS = 16.0
+
+    fun clearAll() {
+        val snapshot = STUCK_DATA.entries.toList()
+        STUCK_DATA.clear()
+        for ((_, data) in snapshot) {
+            data.indicator?.let { indicator ->
+                ACTIVE_INDICATORS.remove(indicator.uuid)
+                PENDING_REMOVALS.add(indicator)
+            }
+            data.indicator = null
+            data.arrows.clear()
+        }
+    }
 
     fun addStuckArrow(victim: LivingEntity, arrow: ItemStack, level: Int) {
         if (victim.isRemoved || !victim.isAlive || victim.health <= 0f) return
@@ -170,6 +184,13 @@ object SplinterPinManager {
     }
 
     fun init() {
+        ServerLivingEntityEvents.AFTER_DEATH.register { entity, _ ->
+            if (entity is PlayerEntity) {
+                this.clearAll()
+                ExplodeManager.clearAll()
+            }
+        }
+
         ServerEntityEvents.ENTITY_LOAD.register { entity, _ ->
             if (entity is TextDisplayEntity && entity.commandTags.contains(INDICATOR_TAG)) {
                 if (!ACTIVE_INDICATORS.contains(entity.uuid)) {
@@ -187,7 +208,7 @@ object SplinterPinManager {
 
         ServerTickEvents.END_SERVER_TICK.register { _ ->
             if (PENDING_REMOVALS.isNotEmpty()) {
-                PENDING_REMOVALS.forEach { it.discard() }
+                PENDING_REMOVALS.forEach { if (!it.isRemoved) it.discard() }
                 PENDING_REMOVALS.clear()
             }
 

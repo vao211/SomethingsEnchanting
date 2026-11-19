@@ -26,9 +26,21 @@ object ExplodeManager {
     private val PENDING_REMOVALS = mutableSetOf<Entity>()
     private const val INDICATOR_TAG = "explode_indicator"
     private const val TIMEOUT_TICKS = 240L
-    private const val HEIGHT_OFFSET = 0.7
+    private const val HEIGHT_OFFSET = 0.8
     private const val MAX_STACKS = 5
 
+    fun clearAll() {
+        val snapshot = STUCK_DATA.entries.toList()
+        STUCK_DATA.clear()
+        for ((_, data) in snapshot) {
+            data.indicator?.let { indicator ->
+                ACTIVE_INDICATORS.remove(indicator.uuid)
+                PENDING_REMOVALS.add(indicator)
+            }
+            data.indicator = null
+            data.arrows.clear()
+        }
+    }
     fun addStuckArrow(victim: LivingEntity, arrow: ItemStack, level: Int) {
         if (victim.isRemoved || !victim.isAlive || victim.health <= 0f) return
 
