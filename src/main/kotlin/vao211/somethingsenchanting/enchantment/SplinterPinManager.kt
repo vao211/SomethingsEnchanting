@@ -118,9 +118,9 @@ object SplinterPinManager {
                 val dy = targetY - spawnY
                 val dz = targetZ - spawnZ
                 val horizontalDist = sqrt(dx * dx + dz * dz).coerceAtLeast(0.001)
-                val compensatedDy = dy + (horizontalDist * 0.035)
+                val compensatedDy = dy + (horizontalDist * 0.015)
 
-                projectile.setVelocity(dx, compensatedDy, dz, 1.8f, 0.25f)
+                projectile.setVelocity(dx, compensatedDy, dz, 1.8f, 0.15f)
             } else {
                 val randomIndex = index - nearbyTargets.size
                 val baseAngle = (360.0 / totalArrows.coerceAtLeast(1)) * randomIndex + (world.random.nextDouble() * 45.0 - 22.5)
