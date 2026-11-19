@@ -21,7 +21,10 @@
   "enchantment.somethingsenchanting.slide_tackle.desc": "While sprinting, press Sneak to slide rapidly forward. Enemies hit by the slide take 4 damage (+1 per level), are knocked airborne, and suffer Slowness III for 2 seconds. Cooldown: 3 seconds.",
 
   "enchantment.somethingsenchanting.splinter_pin": "Splintering Pins",
-  "enchantment.somethingsenchanting.splinter_pin.desc": "Arrows fired stick to the target. Upon death, all stuck arrows explode outward, dealing damage and applying their original potion effects. Ricocheting arrows will not bounce a second time.",
+  "enchantment.somethingsenchanting.splinter_pin.desc": "Arrows fired stick to the target. Upon death or 20 stacks, all stuck arrows explode outward, dealing damage and applying their original potion effects. Ricocheting arrows will not bounce a second time.",
+
+  "enchantment.somethingsenchanting.explode": "Explode",
+  "enchantment.somethingsenchanting.explode.desc": "Applies up to 5 stacks. Detonates at 5 stacks without breaking blocks; dying earlier reduces power by 20% per missing stack.",
 
   "enchantment.somethingsenchanting.earth_shatter": "Earthshatter",
   "enchantment.somethingsenchanting.earth_shatter.desc": "Performing a jump attack (Critical Hit) slams the weapon into the ground, creating a shockwave in a 2-block radius. Nearby enemies take 25% of the original damage per level, are knocked back, and suffer Slowness V for 2 seconds. Cooldown: 5 seconds.",

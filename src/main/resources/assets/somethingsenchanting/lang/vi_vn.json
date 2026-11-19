@@ -21,7 +21,10 @@
   "enchantment.somethingsenchanting.slide_tackle.desc": "Khi đang chạy nước rút, bấm Ngồi để lướt một quãng dài về phía trước. Kẻ địch bị tông trúng sẽ nhận 4 sát thương (tăng theo cấp), bị hất tung lên cao và dính Chậm Chạp III trong 2 giây. Hồi chiêu: 3 giây.",
 
   "enchantment.somethingsenchanting.splinter_pin": "Ghim Tán Xạ",
-  "enchantment.somethingsenchanting.splinter_pin.desc": "Mũi tên bắn trúng sẽ găm vào kẻ địch. Khi kẻ địch bị tiêu diệt, toàn bộ mũi tên đang ghim sẽ nảy bắn ra xung quanh, gây sát thương và giữ nguyên hiệu ứng độc dược. Các mũi tên nảy ra chỉ gây hiệu ứng 1 lần duy nhất.",
+  "enchantment.somethingsenchanting.splinter_pin.desc": "Mũi tên bắn trúng sẽ găm vào kẻ địch. Khi kẻ địch bị tiêu diệt hoặc ghim 20 mũi tên, toàn bộ mũi tên đang ghim sẽ nảy bắn ra xung quanh, gây sát thương và giữ nguyên hiệu ứng độc dược. Các mũi tên nảy ra chỉ gây hiệu ứng 1 lần duy nhất.",
+
+  "enchantment.somethingsenchanting.explode": "Phát Nổ",
+  "enchantment.somethingsenchanting.explode.desc": "Tích tối đa 5 cộng dồn. Đủ 5 cộng dồn sẽ phát nổ (không phá khối); chết trước khi đủ sẽ giảm 20% lực nổ mỗi cộng dồn còn thiếu.",
 
   "enchantment.somethingsenchanting.earth_shatter": "Địa Chấn",
   "enchantment.somethingsenchanting.earth_shatter.desc": "Khi nhảy lên tấn công (Đòn chí mạng), vũ khí đập mạnh xuống đất tạo ra sóng xung kích trong bán kính 2 block. Kẻ địch xung quanh nhận 25% sát thương gốc mỗi cấp, bị hất văng và chịu hiệu ứng Chậm Chạp V trong 2 giây. Hồi chiêu: 5 giây.",
